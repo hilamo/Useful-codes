@@ -1,0 +1,60 @@
+ul#top_menu{
+    position: relative;
+    display: block;
+    text-align: center;
+    -webkit-box-shadow:  0px 5px 15px 0px rgba(38, 33, 97, 0.75);
+    -moz-box-shadow:  0px 5px 15px 0px rgba(38, 33, 97, 0.75);
+    box-shadow: 0px 5px 15px 0px rgba(38, 33, 97, 0.75);
+}
+/**** LEVEL 01 ****/
+ul#top_menu > li{
+    float: right;
+    position: relative;
+    display: block;
+    padding: 16px;
+    line-height: 20px;
+    border-right: 1px solid #63608d;
+}
+ul#top_menu > li > a{
+    color: #fff;
+    font-family: "Alef Hebrew", "Helvetica Neue",Helvetica, Arial,sans-serif;
+    font-size: 18px;
+}
+ul#top_menu > li > a:hover{
+    color:#b5b4c5;
+    text-decoration: none;
+}
+ul#top_menu > li.current-menu-item > a{
+    font-weight: bold;
+}
+
+/**** LEVEL 02 ****/
+ul#top_menu > li > ul.sub-menu{
+    position: absolute;
+    display: none;
+    margin: 0;
+    right: 0;
+    top: 100%;
+    min-width: 200px;
+    background: #3c3871;
+}
+ul#top_menu > li:hover > ul.sub-menu{
+    display: inline-block
+}
+ul#top_menu > li > ul.sub-menu li{
+    display: block;
+    text-align: right;
+    padding-right:15px;
+    min-height: 45px;
+    position: relative;
+}
+ul#top_menu > li > ul.sub-menu li a{
+    color: #fff;
+    padding: 10px 0;
+    display: block;
+    font-size: 18px;
+}
+ul#top_menu > li > ul.sub-menu li a:hover{
+    color: #b5b4c5;
+}
+/*************************************/

@@ -1,0 +1,443 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    font-family: 'Open Sans', sans-serif;
+}
+input,select,p,a,h1,h2,h3,h4,h5,h6{
+    font-family: 'Open Sans', sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+.noheader .header{
+    display:none;
+}
+.noheader #wpadminbar{
+    display:none;
+}
+.noheader .slogan{
+    display:none;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.page-template-template-mobile-new .wrapper{
+    max-width:650px;
+    width:100%;
+    margin:auto;
+}
+.header{
+    background:url("/wp-content/themes/optionsclick_new/images/headerbg.jpg") repeat-x 50% 50%;
+    text-align:center;
+    background-size:100% 100% !important;
+    position:relative;
+}
+.admin-bar.page-template-template-mobile-new{
+    padding-top:32px;
+}
+.login_arrow{
+    width:50px;
+    position:absolute;
+    top:52%;
+    height:50px;
+    left:3px;
+    background:url("/wp-content/themes/optionsclick_new/images/login_arr.png") repeat-x 50% 50%;
+    background-size:100% 100%;
+}
+.page-template-template-mobile-new .open_account_button_bg {
+    background: #4ac22a; /* Old browsers */
+    background: -moz-linear-gradient(top,  #4ac22a 0%, #319c14 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4ac22a), color-stop(100%,#319c14)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #4ac22a 0%,#319c14 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #4ac22a 0%,#319c14 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #4ac22a 0%,#319c14 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #4ac22a 0%,#319c14 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4ac22a', endColorstr='#319c14',GradientType=0 ); /* IE6-9 */
+
+  padding: 5px 4%;
+  position: absolute;
+  top: 0;
+  right: 2%;
+  border:1px solid #1a6206;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.page-template-template-mobile-new .open_account_button_bg a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.page-template-template-mobile-new .logo img{
+    max-width:57%;
+}
+.page-template-template-mobile-new .logo{
+    padding:10px;
+    clear:both;
+}
+.visitFullSite_wrapper{
+    text-align:center;
+}
+#lang_sel_list{
+    display:inline-block;
+    padding-top:5px;
+    min-width:133px;
+}
+#lang_sel_list a{
+    color:#fff;
+    text-decoration:none;
+}
+.language_selector{
+    float:left;
+}
+label.error {
+  color: red;
+  margin-top: 5px;
+  display: block;
+}
+.language_selector:after {
+  content: " ";
+  clear: both;
+  display: block;
+}
+.language_selector_selected {
+	width: auto;
+	height: 19px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 1.1rem;
+    position:relative;
+    font-size:16px;
+}
+.language_selector_selected:after{
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	content:" ";
+	border-top: 10px solid #fff;
+    position:absolute;
+    right:-35px;
+    top:3px;
+}
+.language_selector_selected img {
+	float: right;
+	margin: 2px 0 0 10px;
+
+	width: 18px;
+	height: 12px;
+}
+#lang_sel_list > ul{
+    display:none;
+  position: absolute;
+  background: #011025;
+  padding: 5px 10px;
+  text-align: left;
+  border: 1px solid #fff;
+  line-height: 22px;
+  z-index:9999;
+}
+.wrapper .main_image img{
+    max-width:100%;
+    display:block;
+    width:100%;
+}
+.slogan{
+    background:url("/wp-content/themes/optionsclick_new/images/headerbg.jpg") repeat-x;
+    padding:10px 0;
+    text-align:center;
+    color:#fff;
+    font-size:1.2rem;
+    position:relative;
+    background-size:100% 100% !important;
+}
+.registration_form{
+    padding:10px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9cc100+0,86ac01+50,4a7205+100 */
+    background: #9cc100; /* Old browsers */
+    background: -moz-linear-gradient(top, #9cc100 0%, #86ac01 50%, #4a7205 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9cc100), color-stop(50%,#86ac01), color-stop(100%,#4a7205)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #9cc100 0%,#86ac01 50%,#4a7205 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #9cc100 0%,#86ac01 50%,#4a7205 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #9cc100 0%,#86ac01 50%,#4a7205 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #9cc100 0%,#86ac01 50%,#4a7205 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9cc100', endColorstr='#4a7205',GradientType=0 ); /* IE6-9 */
+}
+.registration_form h3{
+    color: #fff;
+    text-shadow: 1px 0px 2px rgba(6, 52, 91, 1);
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1em;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.contactForm{
+    width:85%;
+    margin:auto;
+}
+.contactForm .field_wrap{
+    width:100%;
+    margin-bottom:5px;
+}
+.contactForm select,
+.contactForm .field_wrap input[type=text],
+.contactForm .field_wrap input[type=tel],
+.contactForm .field_wrap input[type=email]{
+    width:100%;
+    padding:1%;
+    font-size:1rem;
+    background:url("/wp-content/themes/optionsclick_new/images/mobile_inputbg.jpg") repeat-x;
+    border:1px solid #393939;
+    background-size:100% 100%;
+    display:block;
+}
+
+.contactForm .field_wrap input[type=text]#phoneRow{
+    width:20% !important;
+    float:left;
+}
+.contactForm .field_wrap input[type=tel]#telephone{
+  width: 77%;
+  margin-left: 1.4%;
+  float:right;
+}
+.contactForm .field_wrap:after{
+    display:block;
+    clear:both;
+    content:"";
+}
+::-webkit-input-placeholder {color: #333333;}
+:-moz-placeholder { /* Firefox 18- */color: #333333;}
+::-moz-placeholder {  /* Firefox 19+ */color: #333333;}
+:-ms-input-placeholder {color: #333333;}
+
+.checkbox{
+    color:#fff;
+    font-size:12px;
+}
+.checkbox a{
+    color:#2a9d0b;
+    font-size:12px;
+}
+.checkbox .right {
+  position: relative;
+  top: -3px;
+  float: left;
+  width: 80%;
+  line-height:normal;
+}
+.checkbox input{
+    float:left;
+    margin-right:2%;
+}
+.contactForm .form-submit, .open-acc {
+  border: 1px solid #082443;
+  background: url(https://www.optionsclick.com/wp-content/themes/optionsclick_new/images/button_Form.png) repeat-x;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0 1px 1px #0F6D03;
+  background-size:100% 100%;
+}
+.contactForm .form-submit:before {
+  content: " ";
+  width: 23px;
+  height: 19px;
+  left: 10px;
+  top: 8px;
+  position: absolute;
+  background: url(https://www.optionsclick.com/wp-content/themes/optionsclick_new/images/check.png) no-repeat;
+
+}
+.contactForm .form-submit {
+  margin: 20px auto;
+  padding: 10px 15px 10px 40px;
+  width: auto;
+  font-size: 1.1rem;
+  position: relative;
+  border: 1px solid #1a6206;
+  border-radius: 5px;
+  max-width: 100%;
+  display: block;
+}
+.contactForm .form-submit {
+  -webkit-transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  -ms-transition: all 250ms ease-in-out;
+  -o-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+input[type=text],
+input[type=tel],
+input[type=email],
+input[type=number],
+select{
+  -webkit-appearance:none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.right-content{
+    margin-top:10px;
+}
+.social_links{
+    width:51%;
+}
+.social_links a {
+  display: inline-block;
+  background: url(https://www.optionsclick.com/wp-content/themes/optionsclick_new/images/social_sprite.png) no-repeat;
+  width: 40px;
+  background-size:300%;
+  height: 40px;
+}
+.social_links a,
+.login_btn,
+#header .open_account_button_bg a,
+.contactForm .form-submit{
+  -webkit-transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  -ms-transition: all 250ms ease-in-out;
+  -o-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+.social_links a:hover,
+.login_btn:hover,
+.contactForm .form-submit:hover,
+#header .open_account_button_bg a:hover{
+    opacity:0.8;
+}
+.social_links a.twitter{
+    background-position:-40px 0;
+}
+.social_links a.rss{
+    background-position:-80px 0;
+}
+.footer{
+    background: url(https://www.optionsclick.com/wp-content/themes/optionsclick_new/images/mobile_footer_bg.jpg) repeat-x;
+    background-size:100% 100%;
+    padding:20px;
+}
+.play_store_link{
+    float: right;
+    max-width:31%;
+}
+.play_store_link img{
+    width:100%;
+}
+.social_links{
+    float:left;
+}
+.row:after,
+.footer:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.footer_content{
+    clear:both;
+    margin-top:20px;
+    color:#7a7a7a;
+    font-size:1rem;
+}
+.footer_content a{
+    color:#7a7a7a;
+}
+.visitFullSite{
+    color:#7a7a7a;
+    font-size:1rem;
+}
+.footer_content p{
+    margin-bottom:20px;
+}
+select[name=currency]{
+    display:none;
+}
+.page-template-template-registration-standalone .wrapper{
+    max-width:800px;
+}
+
+.page-template-template-registration-standalone .contactForm{
+    width:95%;
+}
+.page-template-template-registration-standalone .contactForm .form-submit{
+    font-size:0.9rem;
+}
+.page-template-template-registration-standalone .slogan{
+    font-size:1rem;
+}
+.page-template-template-registration-standalone .checkbox .right{
+    font-size:91%;
+}
+.blog .registration_form{
+    background:#fff;
+    border:1px solid #393939;
+    border-radius:10px;
+}
+.empty .registration_form{
+    background:none !important;
+}
+.page-template-template-registration-standalone.blog .checkbox .right a,
+.page-template-template-registration-standalone.blog .checkbox .right{
+    color:#000;
+}
+.page-template-template-registration-standalone.blog .slogan{
+    display:none;
+}
+.page-template-template-registration-standalone.blog .checkbox .right{
+    width:88%;
+    margin-top:10px;
+}
+.page-template-template-registration-standalone.blog .ok {
+    color: green;
+    text-align: center;
+}
+.contactForm select,
+.contactForm .field_wrap input[type=text],
+.contactForm .field_wrap input[type=tel],
+.contactForm .field_wrap input[type=email]{
+    color: #a7a9ac;
+    background-color: #fff;
+    height: 34px;
+    border: 1px solid #d7d7d7;
+}

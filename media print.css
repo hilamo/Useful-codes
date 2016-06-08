@@ -1,0 +1,19 @@
+@media print {
+    .page-break	{ display: block; page-break-before: always;} 
+    .entry-author-link,
+    .entry-permalink,
+    .entry-date,
+    .entry-meta {
+        display: none !important;
+    }
+    .header, #titlebar,.footer, .main_sidebar{
+        display: none !important;
+    }
+    .main_content{
+        width: 100% !important;
+        float: none !important;
+    }
+    a[href]:after {
+        content: none !important;
+    }
+}

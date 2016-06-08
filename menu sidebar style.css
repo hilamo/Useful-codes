@@ -1,0 +1,36 @@
+/** Menu Sidebar - Style */
+
+
+.page_sidebar_holder {
+    float: left;
+    width: 21.5%;
+    margin-right: 2%;
+}   
+.page_sidebar_holder li {
+    list-style: none;
+}
+.page_sidebar li ul.menu li a{
+    color: #243236;
+    background: #f0f0f0;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: "carmelit","arial";
+    display: block;
+    padding-left: 16px;
+}
+.page_sidebar li ul.menu li{
+    line-height: 43px;
+    cursor: pointer;
+    list-style: none;
+}
+.page_sidebar li ul.menu > li.current-menu-item ul li a:hover,
+.page_sidebar li ul.menu li ul li.current-menu-item a,
+.page_sidebar li ul.menu > li.current-menu-item a,
+.page_sidebar li ul.menu li a:hover{
+    color: #f0f0f0;
+    background: #243236;
+}
+.page_sidebar li ul.menu > li.current-menu-item ul li a{
+    color: #243236;
+    background: #f0f0f0;
+}

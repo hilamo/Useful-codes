@@ -1,0 +1,28 @@
+/* How to change Select menu background */
+
+html:
+<div class="wrap_select_input">
+	<select name="menu-410" class="wpcf7-select" aria-invalid="false">
+		<option value="choose...">choose...</option>
+		<option value="general">general</option>
+		<option value="other">other</option>
+	</select>
+</div>
+
+CSS:
+.wrap_select_input{
+    height: 24px;
+    width: 204px;
+    line-height: 24px;
+    background: #afbabf;
+    border: none;
+    padding-left: 5px;
+	overflow:hidden;
+}
+.wpcf7-select{
+    width: 229px;
+    overflow: hidden;
+    background: url(images/home_select_btn.jpg) no-repeat;
+    background-position: 87% 100%;
+}
+/* Example from "ANS-Tech" Site */

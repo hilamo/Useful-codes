@@ -1,0 +1,19 @@
+/*style scrollbar css*/
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+::-webkit-scrollbar-track{
+  background: rgba(0, 0, 0, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #c5a248;
+  -webkit-box-shadow: 0 0 1px #c5a248;
+}
+/*
+	see also
+	http://css-tricks.com/custom-scrollbars-in-webkit/
+*/

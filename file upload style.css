@@ -1,0 +1,60 @@
+/** HTML
+<input type="text" name="my-file" value="" id="my-file" />
+<input type="file" name="file-56" value="1" id="real-file" />
+
+ ********/
+
+
+/** CSS ********/
+#my-file{
+    width:75%;
+    float: right;
+}
+#real-file{
+    color: transparent;
+    outline: none !important;
+    width:20%;
+    margin-right: 4%;
+}
+#real-file::-webkit-file-upload-button {
+  visibility: hidden;
+}
+#real-file::before {
+    content: 'העלה קובץ';
+    color: #504e4f;
+    font-size: 17px;
+    padding: 0.3em 1em;
+    display: inline-block;
+    background: #fdfdfd;
+    border: 1px solid #ccc;
+    height: 36px;
+    float: right;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+}
+#real-file:hover::before {
+  border-color: black;
+}
+#real-file:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+/** SCRIPT
+// inside document.ready
+getFileName();
+jQuery("#real-file").on('change', function() {
+	   getFileName();
+});
+
+// outside document.ready
+function getFileName() {
+    var current_file_value = jQuery('#real-file').val().replace(/.*(\/|\\)/, '');
+    jQuery("#my-file").val(current_file_value);
+}
+
+ **/
+ 
+ http://css-tricks.com/snippets/css/custom-file-input-styling-webkitblink/
+ http://jsfiddle.net/m44fp2yd/

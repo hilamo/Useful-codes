@@ -1,0 +1,123 @@
+/**************************************** Repeat images in options framwork ***************************************/
+
+/********************** add this to your theme's functions.php ****************************/
+/*
+ * Define a custom option type
+ * this type will repeat some text inputs
+ */
+function repeat_text_option_type( $option_name, $option, $values ){
+ 
+  $counter = 0;
+ 
+	$output = '<div class="of-repeat-loop">';
+ 
+	if( is_array( $values ) ) foreach ( (array)$values as $value ){
+ 
+		$output .= '<div class="of-repeat-group">';
+		$output .= '<input class="of-input" name="' . esc_attr( $option_name . '[' . $option['id'] . ']['.$counter.']' ) . '" type="text" value="' . esc_attr( $value ) . '" />';
+		$output .= '<button class="dodelete button icon delete">'. __('Remove') .'</button>';
+ 
+		$output .= '</div><!--.of-repeat-group-->';
+ 
+		$counter++;
+	}
+ 
+	$output .= '<div class="of-repeat-group to-copy">';
+	$output .= '<input class="of-input" data-rel="' . esc_attr( $option_name . '[' . $option['id'] . ']' ) . '" type="text" value="' . esc_attr( $option['std'] ) . '" />';
+	$output .= '<button class="dodelete button icon delete">'. __('Remove') .'</button>';
+	$output .= '</div><!--.of-repeat-group-->';
+ 
+ 
+	$output .= '<button class="docopy button icon add">Add</button>';
+ 
+	$output .= '</div><!--.of-repeat-loop-->';
+ 
+	return $output;
+}
+add_filter( 'optionsframework_repeat_text', 'repeat_text_option_type', 10, 3 );
+ 
+ 
+/*
+ * Sanitize Repeat Fields
+ */
+function sanitize_repeat_field( $input, $option ){
+	$output = array_map( 'sanitize_text_field', $input);
+	return $output;
+}
+add_filter( 'of_sanitize_repeat_text', 'sanitize_repeat_field', 10, 2 );
+ 
+/*
+ * Custom repeating field scripts
+ * Add and Delete buttons
+ */
+function of_repeat_script(){	?>
+ 
+	<style>
+		#optionsframework .to-copy {display: none;}
+ 
+		#optionsframework .of-repeat-group {
+			overflow: hidden;
+			margin-bottom: 1.4em;
+		}
+		#optionsframework .of-repeat-group .of-input {
+			width: 80%;
+		}
+ 
+		.of-repeat-group .dodelete {
+			float: right;
+		}
+	</style>
+ 
+	<script type="text/javascript">
+	jQuery(function($){
+ 
+		$(".docopy").on("click", function(e){
+ 
+		  // the loop object
+		  $loop = $(this).parent();
+ 
+		  // the group to copy
+		  $group = $loop.find('.to-copy').clone().insertBefore($(this)).removeClass('to-copy');
+ 
+		  // the new input
+		  $input = $group.find('input');
+ 
+		  input_name = $input.attr('data-rel');
+		  count = $loop.children('.of-repeat-group').not('.to-copy').length;
+ 
+		  $input.attr('name', input_name + '[' + ( count - 1 ) + ']');
+ 
+ 
+		});
+ 
+		$(".of-repeat-group").on("click", ".dodelete", function(e){
+		  $(this).parent().remove();
+		});
+ 
+	});
+ 
+	</script>
+<?php
+}
+add_action( 'optionsframework_custom_scripts', 'of_repeat_script' ); 
+
+/********************** add this to your options.php ****************************/
+$options[] = array(
+    		'name' => __('Repeating Background Images', 'options_framework_theme'),
+    		'desc' => __('Add the image url for repeating upload input field.', 'options_framework_theme'),
+    		'id' => 'example_repeat',
+    		'std' => 'Default',
+		  'type' => 'repeat_text');
+/********************** add this to the page which contains the element with url background ****************************/
+<script>
+jQuery(document).ready(function(){
+    jQuery(".home_bg").backstretch([
+        <?php 
+            $images = of_get_option("example_repeat"); //returns url string
+            foreach ($images as $img) :
+         ?>
+            "<?php echo $img; ?>",
+         <?php endforeach; ?>
+  ], {duration: 3000, fade: 750});
+});
+</script>    

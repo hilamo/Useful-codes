@@ -1,0 +1,28 @@
+/**************
+KUBE RTL
+**************/
+.units-row .unit-90, .units-row .unit-80, .units-row .unit-75, .units-row .unit-70, .units-row .unit-66, .units-row .unit-65, .units-row .unit-60, .units-row .unit-50, .units-row .unit-40, .units-row .unit-35, .units-row .unit-33, .units-row .unit-30, .units-row .unit-25, .units-row .unit-20, .units-row .unit-10{
+    float: right;
+    margin-right: 3%;
+    margin-left: 0;
+}
+.units-padding .unit-100, .units-padding .unit-90, .units-padding .unit-80, .units-padding .unit-75, .units-padding .unit-70, .units-padding .unit-66, .units-padding .unit-65, .units-padding .unit-60, .units-padding .unit-50, .units-padding .unit-40, .units-padding .unit-35, .units-padding .unit-33, .units-padding .unit-30, .units-padding .unit-25, .units-padding .unit-20, .units-padding .unit-10 {
+    padding: 0.65em;
+}
+.units-split .unit-90, .units-split .unit-80, .units-split .unit-75, .units-split .unit-70, .units-split .unit-66, .units-split .unit-65, .units-split .unit-60, .units-split .unit-50, .units-split .unit-40, .units-split .unit-35, .units-split .unit-33, .units-split .unit-30, .units-split .unit-25, .units-split .unit-20, .units-split .unit-10{
+    margin-right: 0;
+}
+.units-row .unit-90:first-child, .units-row .unit-80:first-child, .units-row .unit-75:first-child, .units-row .unit-70:first-child, .units-row .unit-66:first-child, .units-row .unit-65:first-child, .units-row .unit-60:first-child, .units-row .unit-50:first-child, .units-row .unit-40:first-child, .units-row .unit-35:first-child, .units-row .unit-33:first-child, .units-row .unit-30:first-child, .units-row .unit-25:first-child, .units-row .unit-20:first-child, .units-row .unit-10:first-child{
+    margin-right: 0;
+}
+.units-row {
+    margin-bottom: 0.65em;
+}
+/****************************************************************/
+/* RESPONSIVE **/
+@media screen and (max-width:768px){
+	.units-row .unit-90, .units-row .unit-80, .units-row .unit-75, .units-row .unit-70, .units-row .unit-66, .units-row .unit-65, .units-row .unit-60, .units-row .unit-50, .units-row .unit-40, .units-row .unit-35, .units-row .unit-33, .units-row .unit-30, .units-row .unit-25, .units-row .unit-20, .units-row .unit-10{
+		margin-right: 0;
+		margin-bottom: 0.65em;
+	}
+}
