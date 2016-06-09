@@ -1,0 +1,28 @@
+function accessible_dropdown_focus(){
+	jQuery( "nav.main_menu ul > li > a" )
+		.focus(function() {
+			var wrap_sub_menu = jQuery(this).parent().find('.wrap_sub_menu');
+			if(wrap_sub_menu.length){ // i am top level
+				jQuery('.wrap_sub_menu').removeClass('focused'); // display : none
+				wrap_sub_menu.addClass('focused'); // display : block
+			}
+		})
+		.focusout(function() {
+			var last_li_element;
+			var wrap_sub_menu = jQuery(this).parents('.wrap_sub_menu');
+			var ul_sub_menu   = jQuery(this).parents('ul.sub-menu');
+			if(ul_sub_menu.length){ // i am top level
+				last_li_element = ul_sub_menu.find('li').last(); // find last item in sub menu
+				if(jQuery(this).parent('li').attr('id') == last_li_element.attr('id')){ // if you are last li in sub-menu
+					wrap_sub_menu.removeClass('focused');
+				}
+			}
+		});
+
+	// on esc keyboard close sub-menu
+	jQuery(document).on('keyup',function(evt) {
+	    if (evt.keyCode == 27) {
+		   jQuery('.wrap_sub_menu').removeClass('focused');
+	    }
+	});
+}
