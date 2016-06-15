@@ -37,5 +37,5 @@ function base_pagination() {
 			<div class="alignright"><?php previous_posts_link('Next Entries &raquo;') ?></div>
 		</div>
 <?php }else { ?>
-		<h2 class="post-title">מצטערים, לא נמצאו תוצאות המתאימות למילות החיפוש.</h2>
+		<h2 class="post-title">Sorry, no posts where found. try another search.</h2>
 <?php } ?>
