@@ -51,9 +51,9 @@ ul.top_tabs li:first-child{
 */
 ?>
 <ul class="top_tabs">
-     <li class="active"><a href="#tab_1" class="tab_head">Title - Tab 1</a></li>
-     <li><a href="#tab_2" class="tab_head">Title - Tab 2</a></li>
-     <li><a href="#tab_3" class="tab_head">Title - Tab 3</a></li>
+     <li class="tab_link active"><a href="#tab_1" class="tab_head">Title - Tab 1</a></li>
+     <li class="tab_link"><a href="#tab_2" class="tab_head">Title - Tab 2</a></li>
+     <li class="tab_link"><a href="#tab_3" class="tab_head">Title - Tab 3</a></li>
 </ul>
 
 <div class="tabs_content_holder">
