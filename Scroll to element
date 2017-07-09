@@ -1,3 +1,4 @@
+<script>
 //Scroll to Element
 jQuery("a").click(function(e) {
 	e.preventDefault();
@@ -6,3 +7,4 @@ jQuery("a").click(function(e) {
 		 scrollTop: jQuery(gotoObject).offset().top
 	 }, 600);
 });
+</script>
