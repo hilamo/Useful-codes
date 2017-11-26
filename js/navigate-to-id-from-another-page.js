@@ -1,12 +1,14 @@
-function handle_navigation_with_hash(objectForOffset){
-
-    var offsetSize = objectForOffset.innerHeight(); // calculate the height of the fixed object
-
-    jQuery("ul.sub-menu li.go_to a").click(function(e) { // clicked item with hash
+//----------------   navigation_with_hash  ------------------/
+function handle_navigation_with_hash(clickedObject, topOffsetSize){
+	var offsetSize = topOffsetSize ? topOffsetSize : 0; // calculate the height of the fixed element(usually header)
+    clickedObject.click(function(e) {
         var window_url_no_hash;
         var clicked_url_no_hash;
         var scrollToObject = this.hash;
-
+        if(!scrollToObject){
+            // there is no hash
+            return;
+        }
         if(window.location.href.split('#')[0]){
            window_url_no_hash = window.location.href.split('#')[0];
         }
