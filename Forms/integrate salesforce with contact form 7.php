@@ -3,8 +3,8 @@ add_action( 'wpcf7_before_send_mail', 'my_conversion',10,1 );
 function my_conversion( $cf7 ){
 
     $submission = WPCF7_Submission::get_instance();
-       if($submission) {
-       $posted_data = $submission->get_posted_data();
+    if($submission) {
+        $posted_data = $submission->get_posted_data();
 
         // the fields from contact form 7
         $email       = $posted_data["email"];
