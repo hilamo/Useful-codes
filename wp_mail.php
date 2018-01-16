@@ -1,18 +1,17 @@
 <?php 
 function send_mail_after_user_registration($user_id){
-    global $redux_demo;
     
     $from = '';
-    if(!empty($redux_demo['main_email_adress'])){
-       $from = $redux_demo['main_email_adress']; 
+    if(!empty(get_field('main_email_adress','option'))){
+       $from = get_field('main_email_adress','option'); 
     }else{
-        $from = 'info@lawdex.co.il';
+        $from = 'info@example.com';
     }
     
     $user = get_user_by("id",$user_id);
 
     $to = $user->user_email;
-    $subject = 'רישום לאתר אינדקס עורכי דין';
+    $subject = 'Registration';
     
     $headers = "From $from ". PHP_EOL;
 	$headers .= "Reply-To: $from". PHP_EOL;
@@ -21,11 +20,11 @@ function send_mail_after_user_registration($user_id){
 	$headers .= "Content-Transfer-Encoding: quoted-printable". PHP_EOL;
     
     $message = '<html><body style="direction:rtl; text-align:right;">';     
-        $message .= '<div><h4>ברוך הבא לאתר Lawdex, אינדקס עורכי הדין הגדול בישראל.</h4>';
-        $message .='<p>פרטי הרישום שלך באתר הנם:</p>';
-        $message .='<p><strong>שם משתמש: </strong>'.$user->user_nicename.'</p>';
-        $message .='<p><strong>אימייל: </strong>'.$user->user_email.'</p>';
-        $message .='<p><strong>סיסמא: </strong>'.$_POST['password'].'</p>';
+        $message .= '<div><h4>Welcome to site</h4>';
+        $message .='<p>Your registration details are:</p>';
+        $message .='<p><strong>Username: </strong>'.$user->user_nicename.'</p>';
+        $message .='<p><strong>Email: </strong>'.$user->user_email.'</p>';
+        $message .='<p><strong>Password: </strong>'.$_POST['password'].'</p>';
         $message .='<div>';
     $message .= '</body></html>';
     
