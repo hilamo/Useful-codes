@@ -4,7 +4,7 @@ function handle_navigation_with_hash(clickedObject, topOffsetSize){
     clickedObject.click(function(e) {
         var window_url_no_hash;
         var clicked_url_no_hash;
-        var scrollToObject = this.hash;
+        var scrollToObject = (this.hash) ? (this.hash): (this.attr('href'));
         if(!scrollToObject){
             // there is no hash
             return;
